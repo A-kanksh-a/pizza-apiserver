@@ -1,0 +1,9 @@
+apiVersion: restaurant.programming-kubernetes.info/v2alpha1
+kind: Pizza
+metadata:
+  name: margherita1
+spec:
+  toppings:
+  - mozzarella
+  - tomato
+  size: Small
