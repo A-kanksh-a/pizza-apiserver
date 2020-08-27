@@ -5,5 +5,4 @@ metadata:
 spec:
   toppings:
   - mozzarella
-  - tomato
-  size: Small
+  size: Medium

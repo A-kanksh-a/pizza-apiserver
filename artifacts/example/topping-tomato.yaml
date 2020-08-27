@@ -1,4 +1,4 @@
-apiVersion: restaurant.programming-kubernetes.info/v1alpha1
+apiVersion: restaurant.programming-kubernetes.info/v2alpha1
 kind: Topping
 metadata:
   name: tomato

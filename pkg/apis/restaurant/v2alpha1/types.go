@@ -35,7 +35,7 @@ type PizzaSpec struct {
 	// toppings is a list of Topping names. They don't have to be unique. Order does not matter.
 	Toppings []string `json:"toppings" protobuf:"bytes,1,rep,name=toppings"`
 	// +k8s:conversion-gen=false
-	// toppings is a list of Topping names. They don't have to be unique. Order does not matter.
+	// Size is a string.
 	Size string `json:"size" protobuf:"bytes,1,rep,name=size"`
 }
 

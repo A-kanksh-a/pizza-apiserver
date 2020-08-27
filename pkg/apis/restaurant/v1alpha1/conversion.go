@@ -47,7 +47,7 @@ func Convert_v1alpha1_PizzaSpec_To_restaurant_PizzaSpec(in *PizzaSpec, out *rest
 			Quantity: 1,
 		})
 	}
-	out.Size = "Medium"
+	out.Size = "v1alpha1Medium"
 	return nil
 }
 

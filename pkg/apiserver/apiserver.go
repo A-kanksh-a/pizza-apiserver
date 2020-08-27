@@ -114,12 +114,11 @@ func (c completedConfig) New() (*CustomServer, error) {
 
 	v1beta1storage := map[string]rest.Storage{}
 	v1beta1storage["pizzas"] = customregistry.RESTInPeace(pizzastorage.NewREST(Scheme, c.GenericConfig.RESTOptionsGetter))
-	v1beta1storage["toppings"] = customregistry.RESTInPeace(toppingstorage.NewREST(Scheme, c.GenericConfig.RESTOptionsGetter))
 	apiGroupInfo.VersionedResourcesStorageMap["v1beta1"] = v1beta1storage
 
 	v2alpha1storage := map[string]rest.Storage{}
 	v2alpha1storage["pizzas"] = customregistry.RESTInPeace(pizzastorage.NewREST(Scheme, c.GenericConfig.RESTOptionsGetter))
-	v2alpha1storage["pizzas"] = customregistry.RESTInPeace(toppingstorage.NewREST(Scheme, c.GenericConfig.RESTOptionsGetter))
+	v2alpha1storage["toppings"] = customregistry.RESTInPeace(toppingstorage.NewREST(Scheme, c.GenericConfig.RESTOptionsGetter))
 	apiGroupInfo.VersionedResourcesStorageMap["v2alpha1"] = v2alpha1storage
 
 	if err := s.GenericAPIServer.InstallAPIGroup(&apiGroupInfo); err != nil {
